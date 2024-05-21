@@ -17,17 +17,17 @@ class _HomeScreenState extends State<HomeScreen> with TickerProviderStateMixin {
     super.initState();
     _tabController = TabController(length: 2, vsync: this);
   }
-  Future<void> loadImageList() async {
-    Map<dynamic, dynamic>  allImageTemp;
-    allImageTemp = await FlutterGallaryPlugin.getAllImages;
-    print(" call $allImageTemp.length");
-
-
-    setState(() {
-      this.allImage = allImageTemp['URIList'] as List;
-      this.allNameList = allImageTemp['DISPLAY_NAME'] as List;
-    });
-  }
+  // Future<void> loadImageList() async {
+  //   Map<dynamic, dynamic>  allImageTemp;
+  //   allImageTemp = await FlutterGallaryPlugin.getAllImages;
+  //   print(" call $allImageTemp.length");
+  //
+  //
+  //   setState(() {
+  //     this.allImage = allImageTemp['URIList'] as List;
+  //     this.allNameList = allImageTemp['DISPLAY_NAME'] as List;
+  //   });
+  // }
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
